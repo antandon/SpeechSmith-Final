@@ -1,0 +1,19 @@
+project_id = "dguxhhfqgksqjzuroyck"
+
+[functions.analyze-speech-openai]
+verify_jwt = false
+
+[functions.openai-tts]
+verify_jwt = false
+
+# Settings for the persistent "staging" preview branch only. Production's auth
+# settings are managed in the dashboard and are not affected by this block.
+[remotes.staging]
+project_id = "ozoubootnaaqitbmtbpn"
+
+[remotes.staging.auth]
+site_url = "https://staging.speechsmith.net"
+additional_redirect_urls = ["https://staging.speechsmith.net/**"]
+
+[remotes.staging.auth.email]
+enable_confirmations = true
